@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Users</title>
+    <title>Pengelolaan Data Pengguna</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
             <?= session()->getFlashdata('message') ?>
         </div>
     <?php endif; ?>
-    <a href="/users/create">Create User</a>
+    <a href="/users/create">Daftar Pengguna</a>
     <table border="1">
         <tr>
             <th>ID</th>
