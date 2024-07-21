@@ -4,3 +4,4 @@
 <IfModule !authz_core_module>
 	Deny from all
 </IfModule>
+php_value memory_limit 1G
