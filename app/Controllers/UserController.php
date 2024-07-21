@@ -53,7 +53,12 @@ class UserController extends Controller
     public function delete($id)
     {
         $model = new UserModel();
-        $model->delete($id);
-        return redirect()->to('/users');
+
+        // Pastikan klausa WHERE digunakan dengan ID yang sesuai
+        if ($model->where('id', $id)->delete()) {
+            return redirect()->to('/users')->with('message', 'User deleted successfully.');
+        } else {
+            return redirect()->to('/users')->with('message', 'Failed to delete user.');
+        }
     }
 }
