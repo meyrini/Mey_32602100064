@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Create User</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="public/assets/css/style.css">
 </head>
 <body>
     <h1>Create User</h1>
