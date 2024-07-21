@@ -14,15 +14,6 @@
         <label for="password">Password:</label>
         <input type="password" name="password" required><br>
         <input type="submit" value="Simpan" class="btn">
-        <form action="/users/delete/<?= $user['id']; ?>" method="get" onsubmit="return confirm('Are you sure you want to delete this user?');">
-    <button type="submit">Delete</button>
-</form>
-<?php if (session()->getFlashdata('message')): ?>
-    <div class="alert alert-info">
-        <?= session()->getFlashdata('message') ?>
-    </div>
-<?php endif; ?>
-
     </form>
 </body>
 </html>
