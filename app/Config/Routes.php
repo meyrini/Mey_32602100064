@@ -1,25 +1,28 @@
 <?php
 
-use CodeIgniter\Router\RouteCollection;
+namespace Config;
 
-/**
- * @var RouteCollection $routes
- */
+$routes = Services::routes();
+
+if (file_exists(SYSTEMPATH . 'Config/Routes.php')) {
+    require SYSTEMPATH . 'Config/Routes.php';
+}
+
+$routes->setDefaultNamespace('App\Controllers');
+$routes->setDefaultController('Home');
+$routes->setDefaultMethod('index');
+$routes->setTranslateURIDashes(false);
+$routes->set404Override();
+$routes->setAutoRoute(true);
+
 $routes->get('/', 'Home::index');
-// app/Config/Routes.php
-$routes->get('/', 'Pages::home');
-$routes->get('/profile', 'Pages::profile');
-$routes->get('/skills', 'Pages::skills');
-$routes->get('/layouting', 'Layouts::index');
+$routes->get('/users', 'UserController::index');
+$routes->get('/users/create', 'UserController::create');
+$routes->post('/users/store', 'UserController::store');
+$routes->get('/users/edit/(:num)', 'UserController::edit/$1');
+$routes->post('/users/update/(:num)', 'UserController::update/$1');
+$routes->get('/users/delete/(:num)', 'UserController::delete/$1');
 
-// Crud
-$routes->get('/crud', 'Crud::index');
-$routes->get('/crud/tambah', 'Crud::tambah');
-$routes->post('/crud/tambah', 'Crud::tambah');
-$routes->get('/crud/hapus/(:segment)', 'Crud::hapus/$1');
-$routes->get('/crud/edit/(:segment)', 'Crud::edit/$1');
-$routes->post('/crud/editan', 'Crud::editan');
-
-
-
-
+if (file_exists(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
+    require APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php';
+}
