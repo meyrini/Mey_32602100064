@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f1f0ec;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 70px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-icon img {
+    max-height: 50px;
+}
+
+.navbar-page,
+.navbar-sosmed {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-page ul,
+.navbar-sosmed ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar-page li,
+.navbar-sosmed li {
+    margin: 0 15px;
+}
+
+.navbar-page a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-page a:hover {
+    color: #007BFF;
+}
+
+.fa-brands {
+    margin-right: 10px;
+    font-size: 18px;
+    color: #007BFF;
+    transition: color 0.3s ease;
+}
+
+.fa-brands:hover {
+    color: #0056b3;
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+    background-image: url("/assets/image/bg.jpeg");
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.name {
+    letter-spacing: 3px;
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.description {
+    opacity: 0.8;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.about {
+    background-color: #130E0B;
+    color: #FAFAFA;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .navbar-icon,
+    .navbar-page,
+    .navbar-sosmed {
+        flex-grow: unset;
+        margin-bottom: 10px;
+    }
+
+    .navbar-page ul,
+    .navbar-sosmed ul {
+        flex-direction: column;
+    }
+
+    .navbar-page li,
+    .navbar-sosmed li {
+        margin: 10px 0;
+    }
+
+    .banner {
+        padding: 50px 20px;
+    }
+
+    .name {
+        font-size: 32px;
+    }
+
+    .description {
+        font-size: 18px;
+    }
+
+    .about {
+        padding: 50px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .name {
+        font-size: 28px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+}
