@@ -14,6 +14,10 @@
         <label for="password">Password:</label>
         <input type="password" name="password" required><br>
         <input type="submit" value="Simpan" class="btn">
+        <form action="/users/delete/<?= $user['id']; ?>" method="get" onsubmit="return confirm('Are you sure you want to delete this user?');">
+    <button type="submit">Delete</button>
+</form>
+
     </form>
 </body>
 </html>
