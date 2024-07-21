@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Tambah Pengguna</title>
-    <link rel="stylesheet" type="text/css" href="<?= base_url('css/style.css') ?>">
+    <title>Create User</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <h1>Tambah Pengguna</h1>
+    <h1>Create User</h1>
     <form action="/users/store" method="post">
-        <label for="name">Nama:</label>
+        <label>Name</label>
         <input type="text" name="name" required><br>
-        <label for="email">Email:</label>
+        <label>Email</label>
         <input type="email" name="email" required><br>
-        <label for="password">Password:</label>
+        <label>Password</label>
         <input type="password" name="password" required><br>
-        <input type="submit" value="Simpan" class="btn">
+        <button type="submit">Create</button>
     </form>
 </body>
 </html>
