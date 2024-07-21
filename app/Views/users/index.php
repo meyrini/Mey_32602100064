@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Daftar Pengguna</title>
+    <title>Users</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <h1>Daftar Pengguna</h1>
+    <h1>Users</h1>
     <?php if (session()->getFlashdata('message')): ?>
         <div class="alert alert-info">
             <?= session()->getFlashdata('message') ?>
