@@ -53,7 +53,7 @@ class UserController extends Controller
     public function delete($id)
     {
         $model = new UserModel();
-        $model->delete($id);
+        $model->where('id', $id)->delete();
         return redirect()->to('/users')->with('message', 'User deleted successfully.');
     }
 }
